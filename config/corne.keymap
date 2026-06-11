@@ -34,10 +34,10 @@
 
         Alpha {
             bindings = <
-&kp TAB           &kp V  &kp W  &kp F                  &kp P        &lt 5 DELETE    &mo 5                &kp J        &kp U                      &kp L  &kp Y  &kp RS(TAB)
-&kp LEFT_CONTROL  &kp A  &kp R  &kp S                  &kp T        &kp G           &mt RIGHT_CONTROL M  &kp N        &kp E                      &kp I  &kp O  &kp RIGHT_CONTROL
-&kp LEFT_GUI      &kp Z  &kp X  &kp C                  &kp D        &kp LEFT_ALT    &kp RIGHT_GUI        &kp H        &kp B                      &kp K  &kp Q  &kp RIGHT_GUI
-                                &mt LEFT_SHIFT ESCAPE  &lt 1 SPACE  &lt 3 ENTER     &lt 4 ENTER          &lt 2 SPACE  &mt RIGHT_SHIFT BACKSPACE
+&kp TAB           &kp V  &kp W  &kp F                  &kp P        &lt 5 DELETE    &lt 5 INSERT   &kp J        &kp U                      &kp L  &kp Y  &kp RS(TAB)
+&kp LEFT_CONTROL  &kp A  &kp R  &kp S                  &kp T        &kp G           &kp M          &kp N        &kp E                      &kp I  &kp O  &kp RIGHT_CONTROL
+&kp LEFT_GUI      &kp Z  &kp X  &kp C                  &kp D        &kp LEFT_ALT    &kp RIGHT_ALT  &kp H        &kp B                      &kp K  &kp Q  &kp RIGHT_GUI
+                                &mt LEFT_SHIFT ESCAPE  &lt 1 SPACE  &lt 3 ENTER     &lt 4 ENTER    &lt 2 SPACE  &mt RIGHT_SHIFT BACKSPACE
             >;
         };
 
