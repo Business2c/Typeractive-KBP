@@ -52,8 +52,8 @@
 
         NumPunc {
             bindings = <
-&kp PLUS   &kp COMMA     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans              &trans             &trans  &trans  &trans  &trans  &trans
-&kp MINUS  &kp PERIOD    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON           &kp SEMICOLON      &trans  &trans  &trans  &trans  &trans
+&kp PLUS   &kp COLON     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans              &trans             &trans  &trans  &trans  &trans  &trans
+&kp MINUS  &kp COMMA     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD          &kp SEMICOLON      &trans  &trans  &trans  &trans  &trans
 &kp EQUAL  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES  &trans  &trans  &trans  &trans  &trans
                                        &trans        &kp SPACE     &kp ENTER           &trans             &trans  &trans
             >;
