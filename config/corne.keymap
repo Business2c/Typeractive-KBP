@@ -43,10 +43,10 @@
 
         NumPunc {
             bindings = <
-&kp PLUS   &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans              &trans             &trans     &trans         &trans  &trans  &trans
-&kp MINUS  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD          &kp DOUBLE_QUOTES  &trans     &trans         &trans  &trans  &trans
-&kp EQUAL  &kp COMMA     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SINGLE_QUOTE    &trans             &trans     &trans         &trans  &trans  &trans
-                                       &trans        &trans        &trans              &kp ENTER          &kp SPACE  &kp BACKSPACE
+&kp PLUS   &kp SEMICOLON  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans              &trans             &trans     &trans         &trans  &trans  &trans
+&kp MINUS  &kp NUMBER_0   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD          &kp COLON          &trans     &trans         &trans  &trans  &trans
+&kp EQUAL  &kp COMMA      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES  &trans     &trans         &trans  &trans  &trans
+                                        &trans        &trans        &trans              &kp ENTER          &kp SPACE  &kp BACKSPACE
             >;
         };
 
