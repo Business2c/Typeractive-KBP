@@ -5,7 +5,7 @@
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 3000  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL  10    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL  10   // default: 10
 
 #define SLOW_LAYER 6
 
@@ -30,31 +30,30 @@
     acceleration-exponent = <0>;
 };
 
-// Define the no-acceleration behavior instance
-/ {
+/*
+ * Slow mouse movement:
+ * - no acceleration
+ * - 1500 movement value = 0.5x of normal 3000 movement
+ */
+ / {
     behaviors {
         mmv_no_accel: mouse_move_no_accel {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
+
             x-input-code = <INPUT_REL_X>;
             y-input-code = <INPUT_REL_Y>;
+
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <0>;
         };
     };
 };
 
-&mmv_input_listener {
-    input-processors = <&zip_xy_scaler 1 1>;
-
-    slow_layer {
-        layers = <SLOW_LAYER>;
-        input-processors = <&zip_xy_scaler 1 2>;   // 0.5x speed
-    };
-};
-
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -115,10 +114,10 @@
 
         MouseSlow {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                     &mmv_no_accel MOVE_UP    &trans                     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mmv_no_accel MOVE_LEFT    &mmv_no_accel MOVE_DOWN  &mmv_no_accel MOVE_RIGHT   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                     &trans                   &trans                     &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans                     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                         &mmv_no_accel MOVE_Y(-1500)    &trans                         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mmv_no_accel MOVE_X(-1500)    &mmv_no_accel MOVE_Y(1500)     &mmv_no_accel MOVE_X(1500)    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                         &trans                         &trans                         &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans                         &trans
             >;
         };
 
@@ -140,10 +139,16 @@
             >;
         };
 
-        extra1 { status = "reserved"; };
+        extra1 {
+            status = "reserved";
+        };
 
-        extra2 { status = "reserved"; };
+        extra2 {
+            status = "reserved";
+        };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+    };
 };
